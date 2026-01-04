@@ -1,0 +1,29 @@
+{
+  "name": "Wikipedia Donation Destroyer",
+  "version": "1.0",
+  "description": "Removes the Wikipedia donation popup, replacing it with Wikipedia's actual financials.",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.wikipedia.org/*",
+    "https://*.mozilla.org/*",
+    "https://*.mozilla.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.wikipedia.org/*"],
+      "js": ["wdd_wikipedia.js"],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://*.mozilla.org/*",
+        "https://*.mozilla.com/*"
+      ],
+      "js": ["wdd_mozilla.js"],
+      "all_frames": true
+    }
+  ]
+}
