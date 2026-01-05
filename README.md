@@ -16,14 +16,16 @@ The code is simple. No data is collected. No trackers or advertisements.
 
 You're welcome.
 
-# How to Install
+## How to Install
 
 ### For Google Chrome / Chromium / Brave / Edge
+
 1. Download the extension source files.
 2. Within Chrome, go to `chrome://extensions/` and enable **"Developer mode"**.
 3. Click **"Load unpacked"** and select the extension folder.
 
 ### For Firefox
+
 1. Download the extension source files.
 2. Within Firefox, go to `about:debugging#/runtime/this-firefox`.
 3. Click **"Load Temporary Add-on..."**.

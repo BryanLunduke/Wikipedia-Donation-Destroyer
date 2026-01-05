@@ -36,10 +36,10 @@
     },
     {
       "matches": [
-        "https://www.gnome.org/*",
+        "https://www.gnome.org/*"
       ],
       "css": ["styles.css"],
-      "js": ["wdd_common.js", "wdd_mozilla.js"],
+      "js": ["wdd_common.js", "wdd_gnome.js"],
       "all_frames": true
     }
   ]
