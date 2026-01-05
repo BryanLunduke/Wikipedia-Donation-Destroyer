@@ -39,6 +39,12 @@
       "css": ["styles.css"],
       "js": ["wdd_common.js", "wdd_mozilla.js"],
       "all_frames": true
+    },
+    {
+      "matches": ["https://www.gnome.org/*"],
+      "css": ["styles.css"],
+      "js": ["wdd_common.js", "wdd_mozilla.js"],
+      "all_frames": true
     }
   ]
 }
