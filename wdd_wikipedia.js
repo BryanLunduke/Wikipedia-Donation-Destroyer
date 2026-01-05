@@ -40,25 +40,25 @@ function isWikipediaArticle() {
         (document.body.className.includes('ns-') && !document.body.className.includes('ns-0'));
 
   if (isNonArticle) {
-        return false;
-    }
+      return false;
+  }
 
-    // Must have a real title
-    const titleEl = document.querySelector('h1#firstHeading');
-    return titleEl && titleEl.textContent.trim().length > 1;
+  // Must have a real title
+  const titleEl = document.querySelector('h1#firstHeading');
+  return titleEl && titleEl.textContent.trim().length > 1;
 }
 
 function extractPageTitleFromElement(selector) {
-    const titleElement = document.querySelector(selector);
-    const extractedText = titleElement ? titleElement.textContent.trim() : "";
-    return extractedText.length < 3 ? "" : extractedText;
+  const titleElement = document.querySelector(selector);
+  const extractedText = titleElement ? titleElement.textContent.trim() : "";
+  return extractedText.length < 3 ? "" : extractedText;
 }
 
 function extractPageTitleFromDocumentTitle() {
-    return document.title
-        .replace(/\s*[-–—]\s*(Wikipedia|Wikipédia|Wikimedia).*$/i, '')
-        .replace(/\s*[-–—].*$/, '')
-        .trim()
+  return document.title
+    .replace(/\s*[-–—]\s*(Wikipedia|Wikipédia|Wikimedia).*$/i, '')
+    .replace(/\s*[-–—].*$/, '')
+    .trim()
 }
 
 // Create and show the overlay on ALL Wikipedia pages
