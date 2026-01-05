@@ -12,6 +12,10 @@ The Wikipedia Donation Destroyer will also display financial data for Mozilla an
 
 <img width="976" height="417" alt="MozillaScreenshot" src="https://github.com/user-attachments/assets/32bb72c3-1d89-4590-8c9a-4a6af3d9f78f" />
 
+and one for the linux foundation and the gnome foudation : 
+
+<img width="936" height="1022" alt="2026-01-05-165051_hyprshot" src="https://github.com/user-attachments/assets/7425e0d5-0231-45b8-8d93-e10796d0f128" />
+
 The code is simple. No data is collected. No trackers or advertisements.
 
 You're welcome.
