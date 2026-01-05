@@ -1,5 +1,5 @@
 // Show true Mozilla financials
-var wdd_div = document.createElement("div");
+const wdd_div = document.createElement("div");
 Object.assign(wdd_div.style, {
   position:        "fixed",
   top:             "16px",
@@ -25,7 +25,7 @@ Object.assign(wdd_div.style, {
 });
 
 // Close button
-var closeBtn = document.createElement("button");
+const closeBtn = document.createElement("button");
 Object.assign(closeBtn.style, {
   position:        "absolute",
   top:             "8px",
@@ -48,7 +48,7 @@ closeBtn.onclick = function() {
 wdd_div.appendChild(closeBtn);
 
 // Display the true financial data
-var content = document.createElement("div");
+const content = document.createElement("div");
 content.style.textAlign = "center";
 content.innerHTML = 
   '<div style="font-weight: 600; font-size: 15px; margin-bottom: 6px;">' +
