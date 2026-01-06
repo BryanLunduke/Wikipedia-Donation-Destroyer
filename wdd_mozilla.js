@@ -57,7 +57,8 @@ content.innerHTML =
   '<div style="margin-bottom: 4px;">' +
     'Revenue: <strong>$653 Million</strong> ' +
     '| Total Assets: <strong>$1.4 Billion</strong> <br>' +
-    'CEO Pay: <strong>$6.2 Million</strong></strong>' +
+    'CEO Pay: <strong>$6.2 Million</strong></strong> <br>' +
+    'Google is paying Mozilla <strong>$400 Million per year</strong> to remain the default search engine in Firefox.' +
   '</div>' +
   '<div style="font-size: 13px; opacity: 0.9;">' +
     'Sources: ' +
@@ -70,6 +71,11 @@ content.innerHTML =
        'target="_blank" ' +
        'style="color: #a5d8ff; text-decoration: none; border-bottom: 1px dotted #a5d8ff;">' +
        'Annual Report' +
+    '</a>, ' +
+        '<a href="https://www.theregister.com/2025/03/12/mozilla_doj_google_search_payments/" ' +
+       'target="_blank" ' +
+       'style="color: #a5d8ff; text-decoration: none; border-bottom: 1px dotted #a5d8ff;">' +
+       'The Register' +
     '</a>' +
   '</div>';
 
