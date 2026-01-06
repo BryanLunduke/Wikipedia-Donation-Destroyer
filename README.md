@@ -1,5 +1,9 @@
 # Donation-Destroyer
-_Donation Destroyer_ removes the donation popups of "non-profit" foundation websites, replacing it with their actual financials.
+<div align="center">
+    <img width="512" height="512" alt="dd_icon_bigger" src="https://github.com/user-attachments/assets/366e8330-a3ce-42f3-b895-9b1a17857c27" />
+</div>
+
+__Donation Destroyer__ removes the donation popups of "non-profit" foundation websites, replacing it with their actual financials.
 
 In other words, _Donation Destroyer_:
 1. Blocks adware popups like: _"Donate or our totally non-profit foundation will die in 3 minutes!"_.
