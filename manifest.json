@@ -9,7 +9,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "npdd@local.dev",
-      "strict_min_version": "109.0"
+      "strict_min_version": "109.0",
       "data_collection_permissions": {
         "required" :  ["none"]
       }
@@ -59,6 +59,7 @@
     },
     {
       "matches": ["https://*.wikipedia.org/*"],
+      "css" : ["styles.css"],
       "js": ["npdd_common.js", "data/wikipedia.js"],
       "all_frames": true
     },
