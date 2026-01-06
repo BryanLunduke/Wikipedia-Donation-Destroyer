@@ -52,31 +52,24 @@ var content = document.createElement("div");
 content.style.textAlign = "center";
 content.innerHTML = 
   '<div style="font-weight: 600; font-size: 15px; margin-bottom: 6px;">' +
-    '<strong>Mozilla Financials (As of 2024)</strong>' +
+    '<strong> GNOME Foundation Financials (As of 2024) </strong>' +
   '</div>' +
   '<div style="margin-bottom: 4px;">' +
-    'Revenue: <strong>$653 Million</strong> ' +
-    '| Total Assets: <strong>$1.4 Billion</strong> <br>' +
-    'CEO Pay: <strong>$6.2 Million</strong></strong> <br>' +
-    'Google is paying Mozilla <strong>$400 Million per year</strong> to remain the default search engine in Firefox.' +
+    'Total Assets: <strong>$1.1M Million</strong>' +
+    '| Expenses: <strong>$1.68 Million</strong> <br> Total Liablilities $61.4K ' +
   '</div>' +
   '<div style="font-size: 13px; opacity: 0.9;">' +
     'Sources: ' +
-    '<a href="https://assets.mozilla.net/annualreport/2024/b200-mozilla-foundation-form-990-public-disclosure-ty23.pdf" ' +
+    '<a href="https://projects.propublica.org/nonprofits/organizations/43572618" ' +
        'target="_blank" ' +
        'style="color: #a5d8ff; text-decoration: none; border-bottom: 1px dotted #a5d8ff;">' +
-       'IRS Form 990' +
+       'Project Propublica' +
     '</a>, ' +
-    '<a href="https://assets.mozilla.net/annualreport/2024/mozilla-fdn-2023-fs-final-short-1209.pdf" ' +
+    '<a href="https://foundation.gnome.org/reports/2023-2024-annual-report" ' +
        'target="_blank" ' +
        'style="color: #a5d8ff; text-decoration: none; border-bottom: 1px dotted #a5d8ff;">' +
-       'Annual Report' +
+       'GNOME Foundation Annual Report' +
     '</a>, ' +
-        '<a href="https://www.theregister.com/2025/03/12/mozilla_doj_google_search_payments/" ' +
-       'target="_blank" ' +
-       'style="color: #a5d8ff; text-decoration: none; border-bottom: 1px dotted #a5d8ff;">' +
-       'The Register' +
-    '</a>' +
   '</div>';
 
 // Hover effect for links
