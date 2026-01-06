@@ -1,7 +1,6 @@
 {
-  "name": "Non-proits Donation Destroyer++",
+  "name": "Wikipedia Donation Destroyer",
   "version": "1.3",
-  "version-name": "1.3-xgui4-fork",
   "description": "Removes the Wikipedia and others websites donations popups, replacing it with their actual financials.",
   "manifest_version": 3,
   "permissions": [

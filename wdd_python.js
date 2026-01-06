@@ -79,7 +79,12 @@ content.innerHTML =
        'target="_blank" ' +
        'style="color: #a5d8ff; text-decoration: none; border-bottom: 1px dotted #a5d8ff;">' +
        'Annual Reports' +
-    '</a>' +
+    '</a>, ' +
+      '<a href="https://www.youtube.com/watch?v=WbXXDZ-BPBM" ' +
+       'target="_blank" ' +
+       'style="color: #a5d8ff; text-decoration: none; border-bottom: 1px dotted #a5d8ff;">' +
+       'Lunduke Video' +
+    '</a>'
   '</div>';
 
 // Hover effect for links
