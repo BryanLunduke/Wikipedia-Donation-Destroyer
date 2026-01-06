@@ -19,7 +19,7 @@ Currently, _Donation Destroyer_ supports the following foundation-based sites:
 
 <img width="976" height="417" alt="MozillaScreenshot" src="https://github.com/user-attachments/assets/32bb72c3-1d89-4590-8c9a-4a6af3d9f78f" />
 
-The code is delibarately:
+The code is deliberately:
 - simple
 - without:
     - data collection
