@@ -1,7 +1,11 @@
 {
-  "name": "Wikipedia Donation Destroyer",
-  "version": "1.2",
-  "description": "Removes the Wikipedia donation popup, replacing it with Wikipedia's actual financials.",
+  "name": "Donation Destroyer",
+  "version": "1.4",
+  "description": "Removes the donation popups of \"non-profit\" foundation websites, replacing it with their actual financials.",
+  "icons": {
+	  "32": "assets/dd_icon.png",
+	  "64": "assets/dd_icon_big.png"
+  },
   "manifest_version": 3,
   "permissions": [
     "activeTab"
@@ -12,15 +16,23 @@
     "https://*.mozilla.org/*",
     "https://*.mozilla.com/*"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "donation-destroyer@example.com",
+      "strict_min_version": "109.0"
+    }
+  },
   "content_scripts": [
     {
       "matches": ["https://*.linuxfoundation.org/*"],
-      "js": ["wdd_linuxfoundation.js"],
+      "css": ["styles.css"],
+      "js": ["dd_common.js", "dd_linuxfoundation.js"],
       "all_frames": true
     },
     {
       "matches": ["https://*.wikipedia.org/*"],
-      "js": ["wdd_wikipedia.js"],
+      "css": ["styles.css"],
+      "js": ["dd_common.js", "dd_wikipedia.js"],
       "all_frames": true
     },
     {
@@ -28,7 +40,8 @@
         "https://*.mozilla.org/*",
         "https://*.mozilla.com/*"
       ],
-      "js": ["wdd_mozilla.js"],
+      "css": ["styles.css"],
+      "js": ["dd_common.js", "dd_mozilla.js"],
       "all_frames": true
     }
   ]
