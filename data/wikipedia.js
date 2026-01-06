@@ -81,7 +81,7 @@ function createGrokipediaLink() {
     const grokipediaUrl = "https://grokipedia.com/page/" + encodedTitle;
 
     const grokLink = document.createElement("a");
-    grokLink.className = 'wdd-link';
+    grokLink.className = 'npdd-link';
     grokLink.href = grokipediaUrl;
     grokLink.target = "_blank";
     grokLink.textContent = "See if this page is available on Grokipedia";
