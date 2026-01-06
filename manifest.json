@@ -11,6 +11,7 @@
     "https://*.linuxfoundation.org/*",
     "https://*.mozilla.org/*",
     "https://*.mozilla.com/*",
+    "https://mozilla.substack.com/*",
     "https://*.firefox.com/*",
     "https://*.firefox.org/*",
     "https://*.gnome.org/*"
@@ -30,6 +31,7 @@
       "matches": [
         "https://*.mozilla.com/*",
         "https://*.mozilla.org/*",
+        "https://mozilla.substack.com/*",
         "https://*.firefox.com/*",
         "https://*.firefox.org/*"
       ],
