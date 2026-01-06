@@ -1,4 +1,4 @@
-const WDD = {
+const DD = {
   removeElements: (selectors) => {
     if (!selectors || !Array.isArray(selectors)) return;
     selectors.forEach(sel => {
@@ -6,7 +6,7 @@ const WDD = {
         const elements = document.querySelectorAll(sel);
         elements.forEach(el => el.remove());
       } catch (e) {
-        console.warn('[WDD] Error removing element:', sel, e);
+        console.warn('[DD] Error removing element:', sel, e);
       }
     });
   },
@@ -15,22 +15,22 @@ const WDD = {
     const { title, stats, sources, extraElements } = config;
     
     const div = document.createElement('div');
-    div.className = 'wdd-overlay';
+    div.className = 'dd-overlay';
     
     const close = document.createElement('button');
-    close.className = 'wdd-close-btn';
+    close.className = 'dd-close-btn';
     close.innerHTML = '&times;';
     close.title = 'Close';
     close.onclick = () => div.remove();
     div.appendChild(close);
     
     const content = document.createElement('div');
-    content.className = 'wdd-content';
+    content.className = 'dd-content';
     
     // Title
     if (title) {
         const titleDiv = document.createElement('div');
-        titleDiv.className = 'wdd-title';
+        titleDiv.className = 'dd-title';
         titleDiv.innerHTML = title;
         content.appendChild(titleDiv);
     }
@@ -38,7 +38,7 @@ const WDD = {
     // Stats
     if (stats) {
         const statsDiv = document.createElement('div');
-        statsDiv.className = 'wdd-data';
+        statsDiv.className = 'dd-data';
         statsDiv.innerHTML = stats; 
         content.appendChild(statsDiv);
     }
@@ -46,12 +46,12 @@ const WDD = {
     // Sources
     if (sources && sources.length) {
       const srcDiv = document.createElement('div');
-      srcDiv.className = 'wdd-sources';
+      srcDiv.className = 'dd-sources';
       srcDiv.innerHTML = 'Sources: ';
       
       sources.forEach((src, idx) => {
         const a = document.createElement('a');
-        a.className = 'wdd-link';
+        a.className = 'dd-link';
         a.href = src.url;
         a.target = '_blank';
         a.textContent = src.text;
@@ -66,7 +66,7 @@ const WDD = {
     // Extra custom elements (like Grokipedia link)
     if (extraElements && Array.isArray(extraElements)) {
         const extraContainer = document.createElement('div');
-        extraContainer.className = 'wdd-extra';
+        extraContainer.className = 'dd-extra';
         extraElements.forEach(el => extraContainer.appendChild(el));
         content.appendChild(extraContainer);
     }

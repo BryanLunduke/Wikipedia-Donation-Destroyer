@@ -10,4 +10,4 @@ const CONFIG = {
   }
 };
 
-WDD.createOverlay(CONFIG.financials);
+DD.createOverlay(CONFIG.financials);
