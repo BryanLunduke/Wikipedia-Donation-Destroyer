@@ -1,0 +1,12 @@
+# Rust build artifacts
+/target/
+
+# wasm-pack output
+/pkg-wikipedia/
+/pkg-mozilla/
+/pkg-linuxfoundation/
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.iml

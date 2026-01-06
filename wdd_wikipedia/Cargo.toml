@@ -1,0 +1,14 @@
+[package]
+name = "wdd_wikipedia"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wdd_common = { path = "../wdd_common" }
+wasm-bindgen = { workspace = true }
+web-sys = { workspace = true }
+js-sys = { workspace = true }
+regex = { workspace = true }

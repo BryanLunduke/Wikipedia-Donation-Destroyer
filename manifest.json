@@ -14,22 +14,29 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.linuxfoundation.org/*"],
-      "js": ["wdd_linuxfoundation.js"],
-      "all_frames": true
-    },
-    {
-      "matches": ["https://*.wikipedia.org/*"],
-      "js": ["wdd_wikipedia.js"],
-      "all_frames": true
-    },
-    {
       "matches": [
+        "https://*.wikipedia.org/*",
         "https://*.mozilla.org/*",
-        "https://*.mozilla.com/*"
+        "https://*.mozilla.com/*",
+        "https://*.linuxfoundation.org/*"
       ],
-      "js": ["wdd_mozilla.js"],
+      "js": ["wrapper.js"],
       "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pkg-wikipedia/*",
+        "pkg-mozilla/*",
+        "pkg-linuxfoundation/*"
+      ],
+      "matches": [
+        "https://*.wikipedia.org/*",
+        "https://*.mozilla.org/*",
+        "https://*.mozilla.com/*",
+        "https://*.linuxfoundation.org/*"
+      ]
     }
   ]
 }
