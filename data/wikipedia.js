@@ -81,7 +81,7 @@ function createGrokipediaLink() {
     const grokipediaUrl = "https://grokipedia.com/page/" + encodedTitle;
 
     const grokLink = document.createElement("a");
-    grokLink.className = 'wdd-link';
+    grokLink.className = 'npdd-link';
     grokLink.href = grokipediaUrl;
     grokLink.target = "_blank";
     grokLink.textContent = "See if this page is available on Grokipedia";
@@ -92,13 +92,13 @@ function createGrokipediaLink() {
 }
 
 // Execution
-WDD.removeElements(CONFIG.bannerSelectors);
+NPDD.removeElements(CONFIG.bannerSelectors);
 
 const extraElements = [];
 const grokLink = createGrokipediaLink();
 if (grokLink) extraElements.push(grokLink);
 
-WDD.createOverlay({
+NPDD.createOverlay({
   ...CONFIG.financials,
   extraElements: extraElements
 });

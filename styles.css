@@ -1,4 +1,4 @@
-.wdd-overlay {
+.npdd-overlay {
   position: fixed;
   top: 16px;
   left: 50%;
@@ -23,7 +23,7 @@
   box-sizing: border-box;
 }
 
-.wdd-close-btn {
+.npdd-close-btn {
   position: absolute;
   top: 8px;
   right: 10px;
@@ -37,42 +37,44 @@
   line-height: 1;
   border-radius: 4px;
 }
-.wdd-close-btn:hover {
+
+.npddd-close-btn:hover {
   color: #fff;
 }
 
-.wdd-content {
+.npdd-content {
   text-align: center;
   width: 100%;
 }
 
-.wdd-title {
+.npdd-title {
   font-weight: 600;
   font-size: 15px;
   margin-bottom: 6px;
 }
 
-.wdd-data {
+.npdd-data {
   margin-bottom: 4px;
 }
 
-.wdd-sources {
+.npdd-sources {
   font-size: 13px;
   opacity: 0.9;
   margin-top: 12px;
 }
 
-.wdd-link {
+.npdd-link {
   color: #a5d8ff;
   text-decoration: none;
   border-bottom: 1px dotted #a5d8ff;
   transition: color 0.2s;
 }
-.wdd-link:hover {
+
+.npdd-link:hover {
   color: #4dabf7;
 }
 
-.wdd-extra {
+.npdd-extra {
   margin-top: 12px;
   font-size: 13px;
 }
