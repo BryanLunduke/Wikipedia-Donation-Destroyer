@@ -105,7 +105,7 @@ content.innerHTML =
   '<div style="margin-bottom: 4px;">' +
     'Revenue: <strong>$185.4 Million</strong> ' +
     '| Total Assets: <strong>$286.8 Million</strong> <br>' +
-    'CEO Pay: <strong>$472,629</strong> | Wikipedia.org Hosting Cost: <strong>$3.1 Million</strong>' +
+    'CEO Pay: <strong>$472,629</strong> | Wikimedia\'s Total Expenses: <strong>$178.6 Million</strong>' +
   '</div>' +
   '<div style="font-size: 13px; opacity: 0.9; margin-top: 12px;">' +
     'Sources: ' +
