@@ -1,0 +1,30 @@
+[workspace]
+resolver = "2"
+members = [
+    "wdd_common",
+    "wdd_wikipedia",
+    "wdd_mozilla",
+    "wdd_linuxfoundation",
+]
+
+[workspace.dependencies]
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = [
+    "Document",
+    "Window",
+    "Element",
+    "HtmlElement",
+    "HtmlDivElement",
+    "HtmlButtonElement",
+    "HtmlAnchorElement",
+    "Node",
+    "EventTarget",
+    "MouseEvent",
+    "CssStyleDeclaration",
+    "Location",
+    "DomTokenList",
+    "NodeList"
+]}
+regex = "1"
+console_error_panic_hook = "0.1"
