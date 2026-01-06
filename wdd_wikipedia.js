@@ -5,7 +5,41 @@ if (banner1) banner1.remove();
 var banner2 = document.querySelector('div#frb-inline');
 if (banner2) banner2.remove();
 
-// Helper: Is this a Wikipedia article page? (for Grokipedia link only)
+// The keys in this map are titles of Wikipedia articles for unsafe software,
+// the values are a tuple of alternative's name and a link to it (source code if available)
+const memSafeAlternatives = new Map([
+  [
+    "sudo",
+    {
+      name: "sudo-rs",
+      url: "https://github.com/trifectatechfoundation/sudo-rs"
+    }
+  ],
+  [
+    "GNU Core Utilities",
+    {
+      name: "uutils coreutils",
+      url: "https://github.com/uutils/coreutils"
+    }
+  ],
+  [
+    "Microsoft Azure",
+    {
+      name: "Microsoft Azure (by 2030)",
+      url: "https://azure.microsoft.com"
+    }
+  ],
+  [
+    "FFmpeg",
+    {
+      name: "ffmpeg-rs (fund this instead of Wikipedia)",
+      url: "https://typememetics.institute/fundraiser/ffmpeg-rs"
+    }
+  ],
+  // Add more here
+]);
+
+// Helper: Is this a Wikipedia article page? (for Grokipedia and memory safe alternatives links only)
 function isWikipediaArticle() {
   // Primary: MediaWiki global variable (most reliable)
   if (typeof window.wgNamespaceNumber !== 'undefined') {
@@ -122,6 +156,7 @@ content.innerHTML =
   '</div>';
 
 // Grokipedia link — only if it's an article page
+// and a memory safe alternative link - (not an em-dash!) if there is one.
 if (isWikipediaArticle()) {
   var grokLinkContainer = document.createElement("div");
   grokLinkContainer.style.marginTop = "12px";
@@ -172,6 +207,38 @@ if (isWikipediaArticle()) {
 
     grokLinkContainer.appendChild(grokLink);
     content.appendChild(grokLinkContainer);
+
+    // Check if a memory safe alternative to presented software exists
+    if (memSafeAlternatives.has(pageTitle)) {  
+      console.log(memSafeAlternatives.get(pageTitle));
+      const { name, url } = memSafeAlternatives.get(pageTitle);
+      
+      const safeAlternativeLinkContainer = document.createElement("div");
+      safeAlternativeLinkContainer.style.marginTop = "15px";
+      safeAlternativeLinkContainer.style.fontSize = "15px"; // A bit bigger than Grokipedia link. This is important!
+
+      // Plain text explanation
+      const textNode = document.createTextNode(
+        "The software this article describes was/is being written in a memory-unsafe language. Please consider using the following memory-safe alternative: "
+      );
+
+      // Link to the alternative
+      console.log(pageTitle);
+      const linkNode = document.createElement("a");
+      linkNode.textContent = name;
+      linkNode.href = url;
+      linkNode.target = "_blank";
+      linkNode.style.color = "#a5d8ff";
+      linkNode.style.textDecoration = "none";
+      linkNode.style.borderBottom = "1px dotted #a5d8ff";
+
+      linkNode.onmouseenter = () => { linkNode.style.color = "#4dabf7"; };
+      linkNode.onmouseleave = () => { linkNode.style.color = "#a5d8ff"; };
+      
+      safeAlternativeLinkContainer.appendChild(textNode);
+      safeAlternativeLinkContainer.appendChild(linkNode);
+      content.appendChild(safeAlternativeLinkContainer);
+    }
   }
 }
 
