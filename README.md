@@ -35,10 +35,11 @@ Boom!  Done!  If you don't like the extension, you can remove or disable it from
 
 ### For Firefox
 
-> [!NOTE]
-> This will only work for the current session, unless you sign the addon with a `.xpi` extension, the addon will be temporaly.
-> Unless you do `xpinstall.signatures.required == false` in about:config, but this might only work on Dev Edition and Nightly
-> This is due to an limitation by mozilla and not this addon
+### How to install to unsigned or unsigned addon on Firefox
+
+## Make sure you have these two config enabled on about:config
+
+<img width="1890" height="100" alt="2026-01-07-193321_hyprshot" src="https://github.com/user-attachments/assets/75c04731-183e-4b3a-ae35-aa7a0b0abee5" />
 
 1. Download the extension source files.
 2. Within Firefox, go to `about:debugging#/runtime/this-firefox`.
