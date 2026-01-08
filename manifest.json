@@ -1,11 +1,24 @@
 {
-  "name": "Wikipedia Donation Destroyer",
-  "version": "1.2",
-  "description": "Removes the Wikipedia donation popup, replacing it with actual financials.",
+  "name": "Not-profits Donation Destroyer++",
+  "version": "1.4",
+  "description": "Removes the donation popups of \"non-profit\" foundation websites, replacing it with their actual financials",
   "manifest_version": 3,
   "permissions": [
     "activeTab"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "npdd@local.dev",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required" :  ["none"]
+      }
+    }
+  },
+  "icons": {
+	  "32": "assets/npdd_icon.png",
+	  "64": "assets/npdd_icon_big.png"
+  },
   "host_permissions": [
     "https://*.wikipedia.org/*",
     "https://*.torproject.org/*",
@@ -13,40 +26,61 @@
     "https://*.python.org/*",
     "https://*.linuxfoundation.org/*",
     "https://*.mozilla.org/*",
-    "https://*.mozilla.com/*"
+    "https://*.mozilla.com/*",
+    "https://mozilla.substack.com/*",
+    "https://*.firefox.com/*",
+    "https://*.firefox.org/*",
+    "https://*.gnome.org/*"
   ],
   "content_scripts": [
     {
       "matches": ["https://*.linuxfoundation.org/*"],
-      "js": ["wdd_linuxfoundation.js"],
+      "css" : ["styles.css"],
+      "js": ["npdd_common.js", "data/linuxfoundation.js"],
       "all_frames": true
     },
     {
       "matches": ["https://*.archive.org/*"],
-      "js": ["wdd_internetarchive.js"],
+      "css" : ["styles.css"],
+      "js": ["npdd_common.js", "data/internetarchive.js"],
       "all_frames": true
     },
     {
       "matches": ["https://*.python.org/*"],
-      "js": ["wdd_python.js"],
+      "css" : ["styles.css"],
+      "js": ["npdd_common.js", "data/python.js"],
       "all_frames": true
     },
     {
       "matches": ["https://*.torproject.org/*"],
-      "js": ["wdd_tor.js"],
+      "css" : ["styles.css"],
+      "js": ["npdd_common.js", "data/tor.js"],
       "all_frames": true
     },
     {
       "matches": ["https://*.wikipedia.org/*"],
-      "js": ["wdd_wikipedia.js"],
+      "css" : ["styles.css"],
+      "js": ["npdd_common.js", "data/wikipedia.js"],
       "all_frames": true
     },
     {
       "matches": [
+        "https://*.mozilla.com/*",
         "https://*.mozilla.org/*",
-        "https://*.mozilla.com/*"
+        "https://mozilla.substack.com/*",
+        "https://*.firefox.com/*",
+        "https://*.firefox.org/*"
       ],
-      "js": ["wdd_mozilla.js"],
+      "js": ["npdd_common.js", "data/mozilla.js"],
+      "css" : ["styles.css"],
+      "all_frames": true
+    },    
+    {
+      "matches": [
+        "https://*.gnome.org/*"
+      ],
+      "js": ["npdd_common.js", "data/gnome.js"],
+      "css" : ["styles.css"],
       "all_frames": true
     }
   ]
