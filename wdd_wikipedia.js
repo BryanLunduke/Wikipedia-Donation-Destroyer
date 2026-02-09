@@ -151,30 +151,6 @@ if (isWikipediaArticle()) {
     .replace(/\s+/g, ' ')                  // normalize all whitespace → single space
     .trim();
 
-  // Critical fix: replace spaces with underscores for Grokipedia URL format
-  var grokTitle = pageTitle.replace(/ /g, '_');
-
-  if (grokTitle) {
-    // Encode only special chars (e.g. &, /, ?, etc.) — spaces are already gone
-    var encodedTitle = encodeURIComponent(grokTitle);
-    var grokipediaUrl = "https://grokipedia.com/page/" + encodedTitle;
-
-    var grokLink = document.createElement("a");
-    grokLink.href = grokipediaUrl;
-    grokLink.target = "_blank";
-    grokLink.textContent = "See if this page is available on Grokipedia";
-    grokLink.style.color = "#a5d8ff";
-    grokLink.style.textDecoration = "none";
-    grokLink.style.borderBottom = "1px dotted #a5d8ff";
-
-    grokLink.onmouseenter = () => { grokLink.style.color = "#4dabf7"; };
-    grokLink.onmouseleave = () => { grokLink.style.color = "#a5d8ff"; };
-
-    grokLinkContainer.appendChild(grokLink);
-    content.appendChild(grokLinkContainer);
-  }
-}
-
 // Apply hover effects to all links (sources + Grokipedia if present)
 content.querySelectorAll('a').forEach(a => {
   a.onmouseenter = () => { a.style.color = "#4dabf7"; };
